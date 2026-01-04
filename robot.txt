@@ -3,4 +3,5 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 
-Sitemap: https://yourdomain.com/sitemap.xml
+
+Sitemap: https://ranishbhuju.github.io/sitemap.xml
