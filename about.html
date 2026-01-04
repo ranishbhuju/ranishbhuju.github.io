@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Simple Blog</title>
+    <meta name="description" content="Learn about Simple Blog - A platform for web development tutorials and tech insights.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Simple<span>Blog</span></a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>About Simple Blog</h1>
+                <p>Learn more about our mission to make web development accessible to everyone.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-content">
+        <div class="container">
+            <article class="about-section">
+                <h2>Our Mission</h2>
+                <p>At Simple Blog, we believe that learning web development should be accessible to everyone. Our mission is to provide clear, practical, and easy-to-understand tutorials that help beginners start their web development journey.</p>
+                
+                <h2>What We Do</h2>
+                <p>We create content about:</p>
+                <ul>
+                    <li>HTML, CSS, and JavaScript fundamentals</li>
+                    <li>Responsive web design</li>
+                    <li>Web development best practices</li>
+                    <li>SEO optimization techniques</li>
+                    <li>Free tools and resources for developers</li>
+                </ul>
+                
+                <h2>Our Values</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Accessible Education</h3>
+                        <p>Making complex topics simple and understandable for everyone.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-hands-helping"></i>
+                        <h3>Community Focus</h3>
+                        <p>Building a supportive community of learners and developers.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Practical Learning</h3>
+                        <p>Focusing on real-world projects and practical applications.</p>
+                    </div>
+                </div>
+                
+                <h2>Start Your Journey</h2>
+                <p>Whether you're a complete beginner or looking to refresh your skills, Simple Blog has something for you. Start with our <a href="index.html">latest articles</a> and join our growing community of learners.</p>
+                
+                <a href="index.html#blog" class="btn">Read Our Blog</a>
+            </article>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Simple<span>Blog</span></h3>
+                    <p>Learn web development with simple, practical tutorials.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#blog">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Simple Blog. All rights reserved. | Designed with HTML & CSS</p>
+                <p><a href="sitemap.xml">Sitemap</a> | <a href="#privacy">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+        
+        // Add CSS for about page
+        const style = document.createElement('style');
+        style.textContent = `
+            .about-content { padding: 4rem 0; }
+            .about-section { max-width: 800px; margin: 0 auto; }
+            .about-section h2 { margin-top: 2rem; }
+            .about-section ul { 
+                list-style: none; 
+                margin: 1rem 0 2rem 1rem;
+            }
+            .about-section ul li { 
+                margin-bottom: 0.5rem; 
+                padding-left: 1.5rem;
+                position: relative;
+            }
+            .about-section ul li:before {
+                content: '•';
+                color: var(--primary-color);
+                position: absolute;
+                left: 0;
+                font-size: 1.5rem;
+            }
+            .values-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 2rem;
+                margin: 2rem 0;
+            }
+            .value-card {
+                text-align: center;
+                padding: 2rem;
+                background: var(--light-gray);
+                border-radius: var(--border-radius);
+            }
+            .value-card i {
+                font-size: 2.5rem;
+                color: var(--primary-color);
+                margin-bottom: 1rem;
+            }
+            .value-card h3 { margin-bottom: 0.5rem; }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with HTML & CSS | Simple Blog</title>
+    <meta name="description" content="Complete beginner's guide to HTML and CSS. Learn how to create your first website with step-by-step instructions.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Simple<span>Blog</span></a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <article class="single-article">
+        <div class="container">
+            <div class="article-header">
+                <span class="category">Web Development</span>
+                <h1>Getting Started with HTML & CSS: A Complete Beginner's Guide</h1>
+                <div class="article-meta">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" alt="Author" class="author-avatar">
+                    <div>
+                        <span class="author-name">John Doe</span>
+                        <span class="publish-date"><i class="far fa-calendar"></i> January 15, 2024</span>
+                        <span class="read-time"><i class="far fa-clock"></i> 5 min read</span>
+                    </div>
+                </div>
+                <div class="featured-image">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="HTML CSS Code">
+                </div>
+            </div>
+
+            <div class="article-content">
+                <h2>Introduction to Web Development</h2>
+                <p>HTML (HyperText Markup Language) and CSS (Cascading Style Sheets) are the fundamental building blocks of the web. HTML provides the structure of a webpage, while CSS handles the visual presentation. Together, they allow you to create beautiful, functional websites.</p>
+                
+                <h2>What is HTML?</h2>
+                <p>HTML is the standard markup language for documents designed to be displayed in a web browser. It uses a system of tags and attributes to define the structure and content of web pages.</p>
+                
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;My First Webpage&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;p&gt;This is my first webpage.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                
+                <h2>What is CSS?</h2>
+                <p>CSS is a style sheet language used for describing the presentation of a document written in HTML. CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.</p>
+                
+                <pre><code>body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1 {
+    color: #0066cc;
+    text-align: center;
+}</code></pre>
+                
+                <h2>Basic HTML Structure</h2>
+                <p>Every HTML document follows a basic structure:</p>
+                <ul>
+                    <li><strong>&lt;!DOCTYPE html&gt;</strong> - Defines the document type</li>
+                    <li><strong>&lt;html&gt;</strong> - The root element</li>
+                    <li><strong>&lt;head&gt;</strong> - Contains meta information</li>
+                    <li><strong>&lt;body&gt;</strong> - Contains the visible content</li>
+                </ul>
+                
+                <h2>Common HTML Elements</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Element</th>
+                                <th>Description</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>&lt;h1&gt; to &lt;h6&gt;</td>
+                                <td>Heading tags</td>
+                                <td>&lt;h1&gt;Main Title&lt;/h1&gt;</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;p&gt;</td>
+                                <td>Paragraph</td>
+                                <td>&lt;p&gt;Some text&lt;/p&gt;</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;a&gt;</td>
+                                <td>Link</td>
+                                <td>&lt;a href="#"&gt;Link&lt;/a&gt;</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;img&gt;</td>
+                                <td>Image</td>
+                                <td>&lt;img src="image.jpg" alt="Description"&gt;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <h2>CSS Selectors and Properties</h2>
+                <p>CSS uses selectors to target HTML elements and apply styles. Here are the most common selectors:</p>
+                
+                <h3>Element Selector</h3>
+                <pre><code>p {
+    color: blue;
+    font-size: 16px;
+}</code></pre>
+                
+                <h3>Class Selector</h3>
+                <pre><code>.highlight {
+    background-color: yellow;
+}</code></pre>
+                
+                <h3>ID Selector</h3>
+                <pre><code>#header {
+    background-color: #333;
+    color: white;
+}</code></pre>
+                
+                <h2>Putting It All Together</h2>
+                <p>Here's a complete example of HTML with CSS:</p>
+                
+                <div class="code-example">
+                    <h4>HTML File (index.html)</h4>
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+    &lt;title&gt;My Website&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header class="site-header"&gt;
+        &lt;h1&gt;Welcome to My Site&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+        &lt;p class="intro"&gt;This is my first website!&lt;/p&gt;
+    &lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    
+                    <h4>CSS File (styles.css)</h4>
+                    <pre><code>.site-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.intro {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}</code></pre>
+                </div>
+                
+                <h2>Next Steps</h2>
+                <p>Now that you understand the basics of HTML and CSS, here's what you can do next:</p>
+                <ol>
+                    <li>Practice by creating simple web pages</li>
+                    <li>Learn about responsive design with media queries</li>
+                    <li>Explore CSS frameworks like Bootstrap</li>
+                    <li>Move on to JavaScript for interactivity</li>
+                </ol>
+                
+                <div class="article-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">Web Development</span>
+                    <span class="tag">Beginner</span>
+                    <span class="tag">Tutorial</span>
+                </div>
+                
+                <div class="article-actions">
+                    <button class="btn"><i class="far fa-thumbs-up"></i> Like</button>
+                    <button class="btn"><i class="fas fa-share"></i> Share</button>
+                    <button class="btn"><i class="far fa-bookmark"></i> Save</button>
+                </div>
+                
+                <div class="author-bio">
+                    <h3>About the Author</h3>
+                    <div class="bio-content">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="John Doe">
+                        <div>
+                            <h4>John Doe</h4>
+                            <p>John is a senior web developer with over 10 years of experience. He specializes in front-end development and loves teaching beginners how to code.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <section class="related-posts">
+        <div class="container">
+            <h2>Related Articles</h2>
+            <div class="posts-grid">
+                <article class="post-card">
+                    <div class="post-content">
+                        <span class="category">CSS</span>
+                        <h3><a href="#">Responsive Web Design Principles</a></h3>
+                        <p>Learn how to make your websites look great on all devices.</p>
+                    </div>
+                </article>
+                <article class="post-card">
+                    <div class="post-content">
+                        <span class="category">JavaScript</span>
+                        <h3><a href="#">JavaScript Fundamentals for Beginners</a></h3>
+                        <p>Start learning JavaScript with these basic concepts.</p>
+                    </div>
+                </article>
+                <article class="post-card">
+                    <div class="post-content">
+                        <span class="category">Tools</span>
+                        <h3><a href="#">Free Tools for Web Developers</a></h3>
+                        <p>Essential free tools that every developer should know.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Simple<span>Blog</span></h3>
+                    <p>Learn web development with simple, practical tutorials.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#blog">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Simple Blog. All rights reserved. | Designed with HTML & CSS</p>
+                <p><a href="sitemap.xml">Sitemap</a> | <a href="#privacy">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+        
+        // Add CSS for article page
+        const style = document.createElement('style');
+        style.textContent = `
+            .single-article { padding: 3rem 0; }
+            .article-header { margin-bottom: 3rem; }
+            .category { 
+                background-color: var(--medium-gray);
+                color: var(--primary-color);
+                padding: 0.3rem 1rem;
+                border-radius: 20px;
+                font-size: 0.875rem;
+                font-weight: 600;
+                display: inline-block;
+                margin-bottom: 1rem;
+            }
+            .article-meta {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                margin: 1.5rem 0;
+                color: var(--dark-gray);
+            }
+            .author-avatar {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            .author-name {
+                font-weight: 600;
+                color: var(--text-color);
+                display: block;
+            }
+            .publish-date, .read-time {
+                font-size: 0.875rem;
+                margin-right: 1rem;
+            }
+            .publish-date i, .read-time i {
+                margin-right: 0.3rem;
+            }
+            .featured-image {
+                margin-top: 2rem;
+            }
+            .featured-image img {
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+                border-radius: var(--border-radius);
+            }
+            .article-content {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+            .article-content h2 {
+                margin-top: 2.5rem;
+                padding-bottom: 0.5rem;
+                border-bottom: 2px solid var(--medium-gray);
+            }
+            .article-content h3 {
+                margin-top: 1.5rem;
+                color: var(--dark-gray);
+            }
+            .article-content p {
+                margin: 1rem 0;
+                line-height: 1.8;
+            }
+            .article-content ul, .article-content ol {
+                margin: 1rem 0 1rem 2rem;
+            }
+            .article-content li {
+                margin-bottom: 0.5rem;
+            }
+            pre {
+                background-color: #1e293b;
+                color: #e2e8f0;
+                padding: 1.5rem;
+                border-radius: var(--border-radius);
+                overflow-x: auto;
+                margin: 1.5rem 0;
+                font-family: 'Courier New', monospace;
+            }
+            code {
+                font-family: 'Courier New', monospace;
+            }
+            .table-container {
+                overflow-x: auto;
+                margin: 1.5rem 0;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                background: var(--white);
+                box-shadow: var(--shadow);
+            }
+            th {
+                background-color: var(--light-gray);
+                padding: 1rem;
+                text-align: left;
+                font-weight: 600;
+                border-bottom: 2px solid var(--medium-gray);
+            }
+            td {
+                padding: 1rem;
+                border-bottom: 1px solid var(--medium-gray);
+            }
+            tr:hover {
+                background-color: var(--light-gray);
+            }
+            .code-example {
+                background-color: var(--light-gray);
+                padding: 1.5rem;
+                border-radius: var(--border-radius);
+                margin: 1.5rem 0;
+            }
+            .code-example h4 {
+                color: var(--primary-color);
+                margin-bottom: 0.5rem;
+            }
+            .article-tags {
+                margin: 2rem 0;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+            .tag {
+                background-color: var(--medium-gray);
+                color: var(--dark-gray);
+                padding: 0.3rem 1rem;
+                border-radius: 20px;
+                font-size: 0.875rem;
+            }
+            .article-actions {
+                display: flex;
+                gap: 1rem;
+                margin: 2rem 0;
+            }
+            .article-actions .btn {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            .author-bio {
+                background-color: var(--light-gray);
+                padding: 2rem;
+                border-radius: var(--border-radius);
+                margin-top: 3rem;
+            }
+            .bio-content {
+                display: flex;
+                gap: 1.5rem;
+                align-items: center;
+                margin-top: 1rem;
+            }
+            .bio-content img {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            .related-posts {
+                padding: 3rem 0;
+                background-color: var(--light-gray);
+            }
+            @media (max-width: 768px) {
+                .featured-image img { height: 250px; }
+                .bio-content { flex-direction: column; text-align: center; }
+                .article-actions { flex-direction: column; }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
